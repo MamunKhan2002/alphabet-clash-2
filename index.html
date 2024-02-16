@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -17,23 +17,79 @@
 
     </header>
     <main
-        class="bg-[url('/images/background.png')] min-h-screen bg-no-repeat bg-center flex justify-center ">
+        class="bg-[url('/images/background.png')] min-h-screen bg-no-repeat bg-center flex justify-center items-center">
         <!-- Home section Here -->
-        <section class="hidden flex flex-col items-center justify-center">
+        <section id="home" class="text-center">
             <h1 class="text-[170px] text-white anton-regular">ALPHABET CLASH</h1>
             <p class="text-2xl font-medium text-[#FFFFFF] poppins-regular">Unleash Your Keyboard Kung Fu : Press “Enter”
                 to Play</p>
-            <button class="btn bg-white text-black hover:bg-white font-bold mt-[56px] poppins-regular">Play Now</button>
+            <button onclick="playButton() "
+                class="btn bg-white text-black hover:bg-white font-bold mt-[56px] poppins-regular">Play Now</button>
         </section>
         <!-- play Ground Section Here -->
-        <section>
-            
+        <section id="play-ground" class="space-y-24 hidden">
+            <div class="">
+                <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] text-center border-[20px] boder-solid border-[#010313cc] rounded-xl">
+                    <div class="flex justify-center"><p class="px-6 pb-4 rounded-b-lg bg-[#010313cc] text-base font-medium text-white">Don't watch keyboard  while playing...</p></div>
+                    <span
+                       id="current-alphabet" class=" h-full max-w-full text-9xl text-black font-bold flex justify-center items-center uppercase" >Y</span></div>
+            </div>
+            <!-- Play Ground KBD -->
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+            <!-- Play Ground Button -->
+            <div class="flex justify-between w-full ">
+                <button class="btn bg-[#894189] hover:bg-[#894189] text-white rounded-full space-x-1">
+                    <span>Life</span>
+                    <img src="./images/Vector.svg" alt="" class="">
+                    <span>1</span>
+                </button>
+                <button class="btn bg-[#360490] hover:bg-[#360490] text-white rounded-full space-x-1">
+                    <span>Score</span>
+                    <img src="./images/monetization_on.svg" alt="">
+                    <span>1</span>
+                </button>
+            </div>
         </section>
 
     </main>
     <footer>
 
     </footer>
+    <script src="./script/utility.js"></script>
     <script src="./script/script.js"></script>
 </body>
 
