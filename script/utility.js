@@ -18,6 +18,17 @@ function removeColorElementById(elementId) {
     element.style.backgroundColor = "";
 }
 
+function getElementTextById(elementId) {
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+    const currentElementText = parseInt(elementText);
+    return currentElementText;
+}
+
+function setElementTextById(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
 function getARandomAlphabet() {
     const alphabetString = 'abcdefghijkmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');

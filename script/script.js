@@ -1,37 +1,48 @@
-// function playButton() {
-//     const hideHome = document.getElementById("home");
-//     hideHome.classList.add("hidden");
 
-//     const hidePlayGround = document.getElementById("play-ground");
-//     hidePlayGround.classList.remove("hidden")
-
-// }
 function playerPress(event) {
-    // get the player press alphabet key 
+
     const pressAlphabet = event.key;
-    // console.log('player press alphabet', pressAlphabet);
 
     // get the current Alphabet key 
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLowerCase();
-    // console.log('Expected alphabet', expectedAlphabet);
-    // console.log(expectedAlphabet, pressAlphabet);
+
     // check right or not 
     if (pressAlphabet === expectedAlphabet) {
-        console.log("You got a point");
-        const currentScoreElement = document.getElementById("current-score");
-        const currentScoreText = currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText);
-        const score = currentScore + 1;
-        currentScoreElement.innerText = score;
 
-        console.log(score);
+        // const currentScoreElement = document.getElementById("current-score");
+        // const currentScoreText = currentScoreElement.innerText;
+        // const currentScore = parseInt(currentScoreText);
+        // const score = currentScore + 1;
+        // currentScoreElement.innerText = score;
+
+        const currentScoreText = getElementTextById("current-score");
+        const updatedScore = currentScoreText + 1;
+        setElementTextById("current-score", updatedScore)
+        // console.log(currentScoreText);
+
         removeColorElementById(expectedAlphabet)
         continueGame();
 
     } else {
-        console.log("you loss a life");
+
+        const currentScoreText = getElementTextById("current-life");
+        const updatedScore = currentScoreText - 1;
+        setElementTextById("current-life", updatedScore)
+        if (currentScoreText === 0) {
+            hideElementById("play-ground");
+            showElementById("result-section")
+            console.log("Game Over!");
+        }
+        // console.log(currentScoreText);
+        // ----------------------------
+        // const currentScoreElement = document.getElementById("current-life");
+        // const currentScoreElementText = currentScoreElement.innerText;
+        // const lifeScore = parseInt(currentScoreElementText);
+        // const life = lifeScore - 1;
+        // currentScoreElement.innerText = life;
+
     }
 
 }
@@ -49,6 +60,7 @@ function continueGame() {
 
 function playButton() {
     hideElementById("home");
+    hideElementById("result-section");
     showElementById("play-ground");
     continueGame();
 }

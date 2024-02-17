@@ -29,10 +29,15 @@
         <!-- play Ground Section Here -->
         <section id="play-ground" class="space-y-24 hidden">
             <div class="">
-                <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] text-center border-[20px] boder-solid border-[#010313cc] rounded-xl">
-                    <div class="flex justify-center"><p class="px-6 pb-4 rounded-b-lg bg-[#010313cc] text-base font-medium text-white">Don't watch keyboard  while playing...</p></div>
-                    <span
-                       id="current-alphabet" class=" h-full max-w-full text-9xl text-black font-bold flex justify-center items-center uppercase" >Y</span></div>
+                <div
+                    class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] text-center border-[20px] boder-solid border-[#010313cc] rounded-xl">
+                    <div class="flex justify-center">
+                        <p class="px-6 pb-4 rounded-b-lg bg-[#010313cc] text-base font-medium text-white">Don't watch
+                            keyboard while playing...</p>
+                    </div>
+                    <span id="current-alphabet"
+                        class=" h-full max-w-full text-9xl text-black font-bold flex justify-center items-center uppercase">Y</span>
+                </div>
             </div>
             <!-- Play Ground KBD -->
             <div>
@@ -75,13 +80,24 @@
                 <button class="btn bg-[#894189] hover:bg-[#894189] text-white rounded-full space-x-1">
                     <span>Life</span>
                     <img src="./images/Vector.svg" alt="" class="">
-                    <span>1</span>
+                    <span id="current-life">5</span>
                 </button>
                 <button class="btn bg-[#360490] hover:bg-[#360490] text-white rounded-full space-x-1">
                     <span>Score</span>
                     <img src="./images/monetization_on.svg" alt="">
                     <span id="current-score">0</span>
                 </button>
+            </div>
+        </section>
+        <!-- Play again section here.. -->
+        <section id="result-section" class="hidden">
+            <div class="flex gap-4 flex-col justify-center items-center bg-[#FFFFFF33] px-12 py-11 rounded-2xl">
+                <h2 class="text-3xl text-white">Game Over</h2>
+                <h2 class="text-6xl text-white px-0 py-0"><span class="font-extrabold">Score :</span> <span
+                        id="game-result">14</span></h2>
+                <button class="btn text-2xl text-black font-semibold hover:text-black">Play
+                    Again</button>
+                <p class="text-xl text-white font-medium">Practice will make you Pro</p>
             </div>
         </section>
 
